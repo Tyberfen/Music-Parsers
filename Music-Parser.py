@@ -4,7 +4,13 @@ import sys
 import os
 from mutagen.easyid3 import EasyID3
 
-"""So, what is this supposed to be? Well, its a routine to that parses a txt-file to get the relevant (see variable defs not too far away) tags for some mp3 files and then rewrites those, before moving the finished files to an output-directory as I couldn't be bothered to spend an hour or so to do this manually. Spoiler alert: The routine took a lot longer than that..."""
+"""So, what is this supposed to be?
+Well, its a routine to that parses a txt-file to get the relevant (see variable defs not too far away) tags 
+for some mp3 files and then rewrites those, before moving the finished files to an output-directory 
+as I couldn't be bothered to spend an hour or so to do this manually.
+Spoiler alert: The routine took a lot longer than that...
+Plan on extending and optimizing this in the future...or once I need this again
+"""
 
 titel_nr = 0
 cwd = os.getcwd() #current working folder

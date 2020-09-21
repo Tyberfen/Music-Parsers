@@ -64,6 +64,12 @@ def get_titel(count):
     datasheet_list = datasheet.readlines() #file to list
     disc2 = 0
     list2 = 0
+    
+    """!!!!IMPORTANT!!!!:
+         In current case, the Infosheet is seperated into 2 areas
+        --> I have to take that into account. Should I choose to use this again, I might have to deal
+        with the following code again...
+    """
 
     #see what disc on. Comment out if not required
     if count > 25:

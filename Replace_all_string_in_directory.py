@@ -32,8 +32,9 @@ def main():
 
     for file in os.listdir(cwd):
         filename = os.fsdecode(file)
+        new_filename = filename.replace(old_str, new_str)
         src_str = cwd + '/' + filename
-        dst_str = src_str.replace(old_str, new_str)
+        dst_str = cwd + '/' + new_filename
         os.rename(src_str, dst_str)
     return
 

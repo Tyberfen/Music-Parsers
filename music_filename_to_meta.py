@@ -117,11 +117,15 @@ def main():
         if(filename.endswith('.mp3')):
             get_meta_from_filename(int(pattern_marker), filename)
 
-            audio = EasyID3(filename)
-            audio['artist'] = meta_data['artist']
-            audio['album'] = meta_data['album']
-            audio['title'] = meta_data['songtitle'] + meta_data['context']
-            audio['tracknumber'] = meta_data['songnumber']
+           audio = EasyID3(filename)
+            if meta_data['artist'] != '':
+                audio['artist'] = meta_data['artist']
+            if meta_data['album'] != '':
+                audio['album'] = meta_data['album']
+            if meta_data['Songtitle'] != '':
+                audio['title'] = meta_data['songtitle'] + meta_data['context']
+            if meta_data['songnumber'] != '':
+                audio['tracknumber'] = meta_data['songnumber']
             audio.save()
 
 
@@ -129,9 +133,12 @@ def main():
             get_meta_from_filename(int(pattern_marker), filename)
 
             audio = MP4(filename).tags
-            audio["\xa9nam"] = meta_data['songtitle'] + meta_data['context']
-            audio["\xa9alb"] = meta_data['album']
-            audio["\xa9ART"] = meta_data['artist']
+            if meta_data['songtitle'] != '':
+                audio["\xa9nam"] = meta_data['songtitle'] + meta_data['context']
+            if meta_data['album'] !='':
+                audio["\xa9alb"] = meta_data['album']
+            if meta_data['artist'] != '':
+                audio["\xa9ART"] = meta_data['artist']
             #audio['trkn'] = meta_data['songnumber'] #No idea, why it makes me trouble, but it's work without as well. not pretty, but sufficent (for now)
             audio.save(filename)
 

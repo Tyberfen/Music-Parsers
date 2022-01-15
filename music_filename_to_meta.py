@@ -122,7 +122,7 @@ def main():
                 audio['artist'] = meta_data['artist']
             if meta_data['album'] != '':
                 audio['album'] = meta_data['album']
-            if meta_data['Songtitle'] != '':
+            if meta_data['songtitle'] != '':
                 audio['title'] = meta_data['songtitle'] + meta_data['context']
             if meta_data['songnumber'] != '':
                 audio['tracknumber'] = meta_data['songnumber']

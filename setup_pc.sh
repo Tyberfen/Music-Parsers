@@ -20,7 +20,7 @@ fail=1
 # Shell Setup Script for my manjaro system
 
 # Package List
-pacs=(spotify-launcher qrencode telegram-desktop element-desktop deepin-boot-maker torbrowser-launcher signal-desktop thunderbird korganizer p7zip vlc firefox kdeconnect vim kicad blender steam gimp inkscape discord pdfarranger handbrake sl hollywood brasero)
+pacs=(spotify-launcher qrencode telegram-desktop element-desktop deepin-boot-maker torbrowser-launcher signal-desktop thunderbird korganizer p7zip vlc firefox kdeconnect vim kicad blender steam gimp inkscape discord pdfarranger handbrake sl hollywood brasero falkon)
 
 # Package List from AUR
 ypacs=(visual-studio-code-bin)
